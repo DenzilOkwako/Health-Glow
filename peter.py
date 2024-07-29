@@ -14,7 +14,7 @@ class GlowApp:
             'weight': weight,
             'height': height
         }
-        print("User registered successfully!")
+        # print("User registered successfully!")
 
     def calculate_bmi(self):
         weight = self.user_data.get('weight')
@@ -117,8 +117,15 @@ class GlowApp:
 
 # Example usage
 app = GlowApp()
-app.register_user('John Doe', 30, 70, 1.75)
+# app.register_user('John Doe', 30, 70, 1.75)
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+weight = float(input("Enter your weight (in kg): "))
+height = float(input("Enter your height (in meters): "))
+app.register_user(name, age, weight, height)
 bmi = app.calculate_bmi()
 print(f"Your BMI is: {bmi}")
 calorie_intake = app.suggest_calorie_intake()
 print(f"Suggested Calorie Intake: {calorie_intake}")
+
+
